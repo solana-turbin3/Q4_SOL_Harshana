@@ -2,7 +2,7 @@ import { createUmi } from "@metaplex-foundation/umi-bundle-defaults"
 import { createSignerFromKeypair, signerIdentity, generateSigner, percentAmount } from "@metaplex-foundation/umi"
 import { createNft, mplTokenMetadata } from "@metaplex-foundation/mpl-token-metadata";
 
-import wallet from "../wba-wallet.json"
+import wallet from "/Users/harshanaprajapati/Q4_SOL_Harshana/ts/cluster1/wallet/dev-wallet.json"
 import base58 from "bs58";
 
 const RPC_ENDPOINT = "https://api.devnet.solana.com";
@@ -15,9 +15,9 @@ umi.use(mplTokenMetadata())
 const sellerFeeBasisPoints = percentAmount(0, 2);
 const mint = generateSigner(umi);
 
-const name = "Zeref";
-const uri = "https://devnet.irys.xyz/BRjDZ2UUJebqhrjKxModyxUVfLdbeNNzpEXr5tki4A7U";
-const symbol = "ZRF";
+const name = "JOON";
+const uri = "https://devnet.irys.xyz/7tcPjvq1QAtKHRtTxhqNB5Dr9aSKKqe32ofGBMg3u5YG";
+const symbol = "JN";
 
 (async () => {
     let tx = createNft(umi, {
