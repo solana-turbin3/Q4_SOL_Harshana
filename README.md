@@ -1,33 +1,87 @@
-# Turbin3 Q4 Projects
+# Solana Vulnerability Game 🎮
 
-Welcome to the repository where I have stored all the programs I wrote during Turbin3 Q4. This collection showcases various projects and assignments completed during this period.
+**Devnet Address: `CyE4QLqUJ2PzMEk8gd7eYyyj8c4VCdXSMXATdGJkoMBT`**
 
-## Table of Contents
+A hands-on educational game designed to help developers understand and identify common vulnerabilities in Solana smart contracts.
 
-1. [Projects](#projects)
-2. [Installation](#installation)
+## Overview
 
-## Introduction
+This project is an interactive game that simulates various security vulnerabilities commonly found in Solana programs. Players can practice identifying and exploiting these vulnerabilities in a safe, controlled environment.
 
-This repository contains a variety of programs and projects that I developed during my time in Turbin3 Q4. Each project is designed to demonstrate different skills and concepts learned throughout the course.
+## Challenges
 
-## Projects
+The game includes the following vulnerability challenges:
 
-Here is a list of some of the key projects included in this repository:
+- **Space Validation**: Learn about space-related validation vulnerabilities
+- **Input Validation**: Explore input sanitization and validation bypasses
+- **Arithmetic Underflow**: Understand numerical underflow vulnerabilities
+- **Arithmetic Overflow**: Practice identifying overflow conditions
+- **Program ID Verification**: Learn about program identity verification issues
 
-- **NFT Minting**: Learnt how to mint NFTs on Solana in typescript using Umi.
+## Prerequisites
 
+- Rust (latest stable version)
+- Solana CLI Tools
+- Node.js (v14 or higher)
+- Yarn or npm
+- [Anchor Framework](https://www.anchor-lang.com/)
 
 ## Installation
 
-To get started with any of the projects, follow these steps:
-
 1. Clone the repository:
-   ```
-   git clone https://github.com/solana-turbin3/Q4_SOL_Harshana.git
-   ```
-2. Navigate to the project directory:
-   ```
-   cd Q4_SOL_Harshana
+   ```bash
+   git clone [your-repository-url]
+   cd solana-vuln-game
    ```
 
+2. Install dependencies:
+   ```bash
+   yarn install
+   ```
+
+3. Build the program:
+   ```bash
+   anchor build
+   ```
+
+## Configuration
+
+1. Create a `.env` file in the root directory:
+   ```plaintext
+   SOLANA_CLUSTER_URL=https://api.devnet.solana.com
+   PROGRAM_ID=DEFuzL6ArEcszLSgy1pQBLSdyBd7BKR5CUdckq2RXn2A
+   ```
+
+2. Create a wallet for testing:
+   ```bash
+   solana-keygen new -o walletSec.json
+   ```
+
+## Usage
+
+1. Start the game:
+   ```bash
+   cd game-script
+   yarn start
+   ```
+
+2. Follow the interactive prompts to select and attempt different challenges.
+
+## Project Structure
+
+- `/programs/solana-vuln-game/` - Solana program source code
+- `/game-script/` - Game client interface
+- `/tests/` - Program test files
+- `/migrations/` - Deployment scripts
+
+## Testing
+
+Run the test suite:
+
+```
+anchor test
+```
+
+## Acknowledgments
+
+Thanks to Jeff & the Turbin team!
